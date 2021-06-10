@@ -1,32 +1,214 @@
-<html>
-    <head>
-        <title>Project 1 Progate</title>
-        <link rel="stylesheet" href="stylesheet.css">
-        <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="navbar">
-            <div class="pro"><h1>Progate</h1></div>
-            <ul>
-                <li><a class="a1" href="index.html">Background 1</a></li>
-                <li><a class="a2" href="index2.html">Background 2</a></li>
-                <li><a class="a3" href="index3.html">Background 3</a></li>
-            </ul>
-        </div>
+body {
+    font-family: 'Kelly Slab', cursive;;
+    background-color: aliceblue;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
 
-        <div class="container2">
-        <div class="kotak">
+.navbar {
+    background-color: rgba(0r, 0, 0, 0);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    justify-content: space-between;
+    z-index: 1;
+}
 
-        </div>
-        </div>
-        
-        
-        <div id="footer" class="footer">
-            <h3>Copyright 2021</h3>
-        </div>
-        </div>
+.navbar h1 {
+    padding-left: 20px;
+}
 
-        
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
 
-    </body>
-</html>
+.navbar li {
+    list-style: none;
+    padding-right: 50px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+.navbar li:hover a {
+    color: crimson;
+    text-decoration: none;
+}
+
+.container {
+    text-align: center;
+    height: 657px;
+    display: flex;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-size: cover;
+    background-image: url(bg1.jpg);
+    position: relative;
+}
+
+
+
+.container2 {
+    text-align: center;
+    height: 657px;
+    display: flex;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-size: cover;
+    background-image: url(circle.jpg);
+    position: relative;
+}
+
+
+.container3 {
+    text-align: center;
+    height: 657px;
+    display: flex;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-size: cover;
+    background-image: url(nature1.jpg);
+    position: relative;
+    overflow: hidden;
+    animation: slide 10s infinite;
+}
+
+@keyframes slide {
+    0% {
+        background-image: url(nature2.jpg);
+    }
+    33% {
+        background-image: url(nature3.jpg);
+    }
+    67% {
+        background-image: url(nature4.jpg);
+    }
+}
+
+
+.header h1 {
+    color:white;
+    text-shadow: 7px 7px black;
+    font-size: 90px;
+}
+
+.header h1::after {
+    content: "Arfan Fadillah";
+    color: white;
+    animation: textanim 10s linear infinite;
+}
+
+@keyframes textanim {
+    25%{
+        content: "Alfred Sarunan";
+        color:white ;  
+    }
+    50%{
+        content: "Aidia Oemami";
+        color:white ;
+    }
+    75%{
+        content: "Muhammad Afif Baihaqi";
+        color:white ;
+    }
+    100%{
+        content: "Pykram Roganti Gultom";
+        color:white ;
+    }
+    }
+
+    .footer {
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        z-index: 1;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .ft {
+        color:black;   
+    }
+
+.kotak {
+    width: 377px;
+    height: 377px;
+    position: relative;
+    bottom: -87px;
+    left: -4px;
+    display: inline-block;
+    background:linear-gradient(145deg, crimson,aliceblue);
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: 200% 200%;
+    animation: animasi 2s linear infinite;
+}
+
+@keyframes animasi {
+    25%{
+        background-position: left bottom;
+    }
+    50{
+        background-position: right bottom;
+    }
+    75%{
+        background-position: right top;
+    }
+    100%{
+        background-position: left top;
+    }
+}
+
+@media (max-width: 1000px ) {
+    .navbar a {
+        font-size: 15px;
+    }
+    .kotak {
+        width: 270px;
+        height: 270px;
+        bottom: 28px;
+        left: 25px;
+        display: inline-block;
+        background:linear-gradient(145deg, crimson,aliceblue);
+        border-radius: 50%;
+        overflow: hidden;
+        background-size: 200% 200%;
+        animation: animasi 2s linear infinite;
+    }
+
+    .header h1 {
+        font-size: 60px;
+    }
+}
+
+
+@media (max-width: 670px ) {
+    .navbar a {
+        font-size: 12px;
+    }
+        .kotak {
+            display: none;
+        }
+    .header h1 {
+        font-size: 50px;
+    }
+}
